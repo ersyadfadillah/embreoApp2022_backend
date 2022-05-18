@@ -1,0 +1,55 @@
+@varBaseUrl = http://localhost
+@varBaseUrlPort = {{varBaseUrl}}:5000
+
+###
+GET {{varBaseUrlPort}}/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWEiOiJlcnN5YWQiLCJlbWFpbCI6ImVyc3lhZEBtYWlsLmNvbSIsImlhdCI6MTY1MjgxNDczNywiZXhwIjoxNjUyODE0NzU3fQ.cg16tb_gPqwpMzzLK1gsQrdbVQXdCCISBFYhlkxzMWQ
+
+###
+GET {{varBaseUrlPort}}/user_levels
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWEiOiJlcnN5YWQiLCJlbWFpbCI6ImVyc3lhZEBtYWlsLmNvbSIsImlhdCI6MTY1MjgxNDczNywiZXhwIjoxNjUyODE0NzU3fQ.cg16tb_gPqwpMzzLK1gsQrdbVQXdCCISBFYhlkxzMWQ
+
+### 
+POST {{varBaseUrlPort}}/login
+Content-Type: application/json
+
+{
+    "email" : "ersyad@mail.com",
+    "password" : "666666"
+}
+
+###
+GET  {{varBaseUrlPort}}/token
+
+###
+DELETE {{varBaseUrlPort}}/logout
+
+###
+# ini product
+###
+###
+GET {{varBaseUrlPort}}/products
+
+###
+GET {{varBaseUrlPort}}/products/2
+
+###
+POST {{varBaseUrlPort}}/products
+Content-Type: application/json
+
+{
+    "title": "Produk 2",
+    "price": 555
+}
+
+###
+PATCH {{varBaseUrlPort}}/products/3
+Content-Type: application/json
+
+{
+    "title": "Produk 8",
+    "price": 999
+}
+
+###
+DELETE  {{varBaseUrlPort}}/products/4
