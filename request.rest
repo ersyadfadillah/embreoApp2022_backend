@@ -25,6 +25,50 @@ GET  {{varBaseUrlPort}}/token
 DELETE {{varBaseUrlPort}}/logout
 
 ###
+# ini proposal
+###
+###
+GET {{varBaseUrlPort}}/proposals
+
+###
+GET {{varBaseUrlPort}}/proposals/2
+
+###
+POST {{varBaseUrlPort}}/proposals
+Content-Type: application/json
+
+{
+    "event_name": "Test event 2",
+    "vendor_id": 4,
+    "event_date": "2022-01-01",
+    "event_date2": "2022-02-02",
+    "event_date3": "2022-03-03",
+    "event_location": "sambu",
+    "status": 0,
+    "created_by": 2
+}
+
+###
+PATCH {{varBaseUrlPort}}/proposals/3
+Content-Type: application/json
+
+{
+    "title": "Produk 8",
+    "price": 999
+}
+
+###
+DELETE  {{varBaseUrlPort}}/proposals/4
+
+###
+PATCH {{varBaseUrlPort}}/approvals/1
+Content-Type: application/json
+
+{
+    "komen": "test"
+}
+
+###
 # ini product
 ###
 ###

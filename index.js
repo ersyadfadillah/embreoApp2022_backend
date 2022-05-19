@@ -7,7 +7,7 @@ import cookieParser from "cookie-parser";
 
 // import Users from "./models/UserModel.js"; // tak ada pemakaian kecuali pertama kali sbg create tabel
 // import UserLevels from "./models/UserLevelModel.js";
-// import Proposal from "./models/ProposalModel.js";
+// import Proposals from "./models/ProposalModel.js";
 
 dotenv.config();
 const app = express();
@@ -17,7 +17,7 @@ try {
     console.log('Database konek');
     // await Users.sync(); // utk generate tabel otomatis
     // await UserLevels.sync();
-    // await Proposal.sync();
+    // await Proposals.sync();
 } catch (error) {
     console.error('koneksi gagal, ini erornya ', error);    
 }

@@ -1,17 +1,14 @@
 import Proposals from "../models/ProposalModel.js";
 import Users from "../models/UserModel.js";
 
-export const getAllProposal = async (req, res) => {
+export const getAllMonitoring = async (req, res) => {
     try {
         Proposals.belongsTo(Users,{foreignKey: 'update_by'})
         Users.hasMany(Proposals,{foreignKey : 'id'});
-        const proposal = await Proposals.findAll({
-            where: {
-                status: 0
-            },
+        const monitoring = await Proposals.findAll({
             include:[Users]
         });
-        res.json(proposal);
+        res.json(monitoring);
     } catch (error) {
         res.json({message: error.message});
     }
